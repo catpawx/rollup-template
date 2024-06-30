@@ -1,7 +1,7 @@
 {
-  "name": "rollup-template",
-  "version": "1.0.0",
-  "description": "rollup的模板项目",
+  "name": "@catpawx/rollup-template",
+  "version": "0.0.1",
+  "description": "🐈‍⬛ 猫爪联盟前端团队 rollup的模板项目",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -13,13 +13,16 @@
   "author": "相甫",
   "license": "ISC",
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "commit": "git-cz",
     "build": "rimraf dist && rollup -c",
     "lint": "eslint packages --fix --ext .js",
     "lint:ts": "tsc --noEmit && eslint packages --ext .ts,.tsx",
     "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
-    "lint-staged": "lint-staged --allow-empty"
+    "lint-staged": "lint-staged --allow-empty",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish --registry=https://registry.npmjs.com/"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -33,8 +36,9 @@
     }
   },
   "devDependencies": {
-    "@catpawx/eslint-config-preset": "^0.0.1",
+    "@catpawx/eslint-config-preset": "^0.0.3",
     "@catpawx/prettier-config-preset": "^0.0.1",
+    "@changesets/cli": "^2.27.6",
     "@commitlint/cli": "^19.3.0",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.3",
