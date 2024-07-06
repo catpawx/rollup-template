@@ -1,6 +1,6 @@
 {
   "name": "@catpawx/rollup-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🐈‍⬛ 猫爪联盟前端团队 rollup的模板项目",
   "type": "module",
   "main": "dist/index.js",
