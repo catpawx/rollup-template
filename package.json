@@ -23,6 +23,7 @@
     "prepublishOnly": "pnpm run build",
     "commit": "git-cz",
     "build": "rimraf dist && rollup -c",
+    "build:dev": "rimraf dist && rollup -c ./rollup.config.dev.js",
     "lint": "eslint packages --fix --ext .js",
     "lint:ts": "tsc --noEmit && eslint packages --ext .ts,.tsx",
     "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
