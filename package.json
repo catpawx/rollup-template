@@ -26,7 +26,7 @@
     "build:dev": "rimraf dist && rollup -c ./rollup.config.dev.js",
     "lint": "eslint packages --fix --ext .js",
     "lint:ts": "tsc --noEmit && eslint packages --ext .ts,.tsx",
-    "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
+    "prettier": "prettier --write 'src/**/*.{css,scss,less,js,jsx,ts,tsx}'",
     "lint-staged": "lint-staged --allow-empty",
     "changeset": "changeset",
     "version": "changeset version",
